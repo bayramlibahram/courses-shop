@@ -6,14 +6,21 @@ const hbs = expressHandlebars.create({
     extname:"hbs"
 });
 
+//App engine
 app.engine("hbs", hbs.engine);
 app.set("view engine","hbs");
 app.set("views", "views");
 
-app.get('/', (req, res) => {
-   res.render('index');
-});
+//App configs
+app.use(express.static('public'));
+app.use(express.urlencoded({extended:true}));
 
+//App routes
+app.use('/', require('./routes/home'));
+app.use('/courses', require('./routes/courses'));
+app.use('/addcourse', require('./routes/addcourse'));
+
+//App start
 app.listen(5000, () => {
     console.log(`Server has been started`);
 });
