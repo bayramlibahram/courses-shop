@@ -1,0 +1,30 @@
+{
+  "name": "courses-shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+   "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayramlibahram/courses-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bayramlibahram/courses-shop/issues"
+  },
+  "homepage": "https://github.com/bayramlibahram/courses-shop#readme",
+  "description": "",
+  "dependencies": {
+    "config": "^3.3.7",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "mongoose": "^6.2.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
