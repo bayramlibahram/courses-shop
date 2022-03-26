@@ -1,0 +1,13 @@
+{{#if course}}
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-primary">{{course.title}}</h1>
+        </div>
+        <div class="col-12">
+            <img src="{{course.url}}" alt="">
+            <p>Price: <span class="price">{{course.price}}</span></p>
+        </div>
+    </div>
+{{else}}
+    <p class="text-warning">No course</p>
+{{/if}}

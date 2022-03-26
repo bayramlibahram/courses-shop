@@ -1,0 +1,29 @@
+{{#if course}}
+    <div class="row my-4">
+        <div class="cl-12">
+            <h1 class="text-primary text-uppercase">Edit course</h1>
+        </div>
+        <div class="col-12">
+            <form action="/courses/edit" method="post">
+                <div class="form-group mb-3">
+                    <label for="title">Course name</label>
+                    <input type="text" id="title" name="title" value="{{course.title}}" class="form-control">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="url">Course img</label>
+                    <input type="text" id="url" name="url" value="{{course.url}}" class="form-control">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="price">Course price</label>
+                    <input type="number" class="form-control" id="price" name="price" value="{{course.price}}">
+                </div>
+                <div class="col-12">
+                    <input type="hidden" name="id" value="{{course.id}}">
+                    <button type="submit" class="btn btn-warning">Edit course</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{{else}}
+    <p class="text-warning">No course</p>
+{{/if}}
