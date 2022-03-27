@@ -17,8 +17,14 @@
                     </div>
                     <div class="card-body">
                         <p>Price: <span class="price">{{price}}</span></p>
-                        <a href="/courses/{{id}}" class="card-link text-primary">About course</a>
-                        <a href="/courses/{{id}}/edit?allow=true" class="card-link text-warning">Edit course</a>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="/courses/{{id}}" class="btn btn-sm btn-primary">About course</a>
+                            <a href="/courses/{{id}}/edit?allow=true" class="btn btn-sm btn-warning">Edit course</a>
+                            <form action="/card/add" method="post">
+                                <input type="hidden" name="id" value="{{id}}">
+                                <button type="submit" class="btn btn-sm btn-success">Add card</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -24,6 +24,12 @@
                 {{else}}
                     <li class="nav-item"><a class="nav-link" href="/addcourse">Add course</a></li>
                 {{/if}}
+
+                {{#if isCard}}
+                    <li class="nav-item"><a class="nav-link active" href="/card">Card</a></li>
+                {{else}}
+                    <li class="nav-item"><a class="nav-link" href="/card">Card</a></li>
+                {{/if}}
             </ul>
         </div>
     </div>
