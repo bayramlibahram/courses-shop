@@ -1,7 +1,7 @@
 const convertCurrency = text => {
     return new Intl
-        .NumberFormat('az-AZ', {
-            currency: 'AZN',
+        .NumberFormat('en-En', {
+            currency: 'USD',
             style: 'currency'
         })
         .format(text);
