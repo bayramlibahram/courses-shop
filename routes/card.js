@@ -27,5 +27,9 @@ router.post('/add', async (req, res) => {
     }
 });
 
+router.delete('/remove/:id', async (req, res) => {
+    const card = await Card.removeById(req.params.id);
+    res.status(200).json(card);
+});
 
 module.exports = router;

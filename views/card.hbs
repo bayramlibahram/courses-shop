@@ -3,34 +3,38 @@
         <h1 class="text-primary text-uppercase"></h1>
     </div>
     <div class="col-12">
-        {{#if courses.length}}
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Count</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                {{#each courses}}
+        <div id="card">
+            {{#if courses.length}}
+                <table class="table table-hover">
+                    <thead>
                     <tr>
-                        <td>{{title}}</td>
-                        <td>{{count}}</td>
-                        <td>
-                            <button class="btn btn-sm btn-danger">Delete</button>
-                        </td>
+                        <th>Name</th>
+                        <th>Count</th>
+                        <th>Action</th>
                     </tr>
-                {{/each}}
-                </tbody>
-                <tfoot>
-                <p><strong>Price: <span class="price">{{price}}</span></strong></p>
-                </tfoot>
-            </table>
-        {{else}}
-            <p class="text-warning">
-                Card is empty
-            </p>
-        {{/if}}
+                    </thead>
+                    <tbody>
+                    {{#each courses}}
+                        <tr>
+                            <td>{{title}}</td>
+                            <td>{{count}}</td>
+                            <td>
+                                <button class="btn btn-sm btn-danger card-item-remove" data-id="{{id}}">Delete</button>
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                    <tfoot>
+                    <p><strong>Price: <span class="price">{{price}}</span></strong></p>
+                    </tfoot>
+                </table>
+            {{else}}
+                <p class="text-warning">
+                    Card is empty
+                </p>
+            {{/if}}
+        </div>
     </div>
 </div>
+
+<script src="/card.js"></script>

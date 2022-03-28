@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const expressHandlebars = require('express-handlebars');
+const path = require("path");
 
 const hbs = expressHandlebars.create({
     defaultLayout: "main",
@@ -13,7 +14,7 @@ app.set("view engine", "hbs");
 app.set("views", "views");
 
 //App configs
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({extended: true}));
 
 //App routes
